@@ -1,37 +1,38 @@
 import React from "react";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <header className="w-full py-6 px-4 md:px-8 lg:px-12">
       <nav className="flex justify-between items-center max-w-7xl mx-auto">
-        <div className="text-2xl md:text-3xl font-light text-gray-800">
+        <Link href="/" className="text-2xl md:text-3xl font-light text-gray-800 hover:text-gray-600 transition-colors">
           The soulmates
-        </div>
+        </Link>
         <div className="hidden md:flex space-x-8 lg:space-x-12 text-sm font-light tracking-wide">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="text-gray-600 hover:text-gray-800 transition-colors"
           >
             HOME
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/musician"
             className="text-gray-600 hover:text-gray-800 transition-colors"
           >
             ABOUT
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/services"
             className="text-gray-600 hover:text-gray-800 transition-colors"
           >
             SERVICES
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/contact"
             className="text-gray-600 hover:text-gray-800 transition-colors"
           >
             CONTACT
-          </a>
+          </Link>
         </div>
         <div className="md:hidden">
           <button className="text-gray-600 hover:text-gray-800">

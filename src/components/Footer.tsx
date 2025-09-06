@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -8,18 +9,18 @@ const Footer = () => {
           The soulmates
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-sm text-gray-600">
-          <a href="/fashion" className="hover:text-gray-800 transition-colors">
+          <Link href="/fashion" className="hover:text-gray-800 transition-colors">
             Fashion
-          </a>
-          <a href="/musician" className="hover:text-gray-800 transition-colors">
+          </Link>
+          <Link href="/musician" className="hover:text-gray-800 transition-colors">
             Musician
-          </a>
-          <a href="/neo-soul" className="hover:text-gray-800 transition-colors">
+          </Link>
+          <Link href="/neo-soul" className="hover:text-gray-800 transition-colors">
             Neo Soul & RNB
-          </a>
-          <a href="#" className="hover:text-gray-800 transition-colors">
+          </Link>
+          <Link href="/contact" className="hover:text-gray-800 transition-colors">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
