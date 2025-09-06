@@ -25,12 +25,12 @@ export default function Contact() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl md:text-3xl font-light text-gray-800 mb-6">
-                  Let's collaborate
+                  Let&apos;s collaborate
                 </h2>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                  Ready to create something extraordinary? Whether it's music production, 
-                  fashion consultation, or creative direction, I'm here to bring your vision to life. 
-                  Let's connect and make magic happen.
+                  Ready to create something extraordinary? Whether it&apos;s music production, 
+                  fashion consultation, or creative direction, I&apos;m here to bring your vision to life. 
+                  Let&apos;s connect and make magic happen.
                 </p>
               </div>
 
@@ -174,7 +174,7 @@ export default function Contact() {
                 Ready to create together?
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Every great project starts with a conversation. Let's discuss how we can 
+                Every great project starts with a conversation. Let&apos;s discuss how we can 
                 bring your creative vision to life through music, fashion, and authentic storytelling.
               </p>
             </div>

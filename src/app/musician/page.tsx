@@ -29,14 +29,14 @@ export default function Musician() {
 
               <div className="space-y-4 md:space-y-6">
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  I'm an R&B artist whose sound was born in 2020 and shaped by
+                  I&apos;m an R&B artist whose sound was born in 2020 and shaped by
                   late-night thoughts, real emotions, and rhythms that hit where
-                  words can't. My music blends smooth melodies with raw stories
+                  words can&apos;t. My music blends smooth melodies with raw stories
                   sometimes tender, sometimes bold, always honest.
                 </p>
 
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  Whether it's love, heartbreak, or healing, I say what many
+                  Whether it&apos;s love, heartbreak, or healing, I say what many
                   feel but few can express.
                 </p>
               </div>
