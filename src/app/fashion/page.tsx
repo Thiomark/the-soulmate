@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Image from "next/image";
 
 export default function Fashion() {
   return (
@@ -22,37 +23,36 @@ export default function Fashion() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
             <div className="space-y-8">
-              <div className="bg-[#B5C28A] aspect-[3/4] rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-[#B5C28A] to-[#A0B070] flex items-center justify-center">
-                  <div className="text-center text-gray-700">
-                    <div className="text-sm">Fashion Image</div>
-                    <div className="text-xs mt-1">Striped outfit styling</div>
-                  </div>
-                </div>
+              <div className="aspect-[3/4] rounded-lg overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757184868/the_soulmates/the_soulmates/fashion-striped-outfit.jpg"
+                  alt="JST.REA wearing striped overalls with white puffy sleeves against olive green background"
+                  width={400}
+                  height={533}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
             <div className="grid grid-cols-1 gap-8">
-              <div className="bg-[#D4C5B0] aspect-square rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-[#D4C5B0] to-[#C5B5A0] flex items-center justify-center">
-                  <div className="text-center text-gray-700">
-                    <div className="text-sm">Fashion Image</div>
-                    <div className="text-xs mt-1">
-                      Colorful patchwork jacket
-                    </div>
-                  </div>
-                </div>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757184871/the_soulmates/the_soulmates/fashion-patchwork-jacket.jpg"
+                  alt="Colorful crocheted patchwork jacket with geometric patterns in red, blue, cream and black"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
-              <div className="bg-[#8B7355] aspect-square rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-[#8B7355] to-[#7A6348] flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="text-sm">Fashion Image</div>
-                    <div className="text-xs mt-1">
-                      White graphic tee styling
-                    </div>
-                  </div>
-                </div>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757184869/the_soulmates/the_soulmates/fashion-graphic-tee.jpg"
+                  alt="White graphic t-shirt with artistic animal silhouettes and Spanish text"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

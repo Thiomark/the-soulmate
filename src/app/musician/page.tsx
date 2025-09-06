@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Image from "next/image";
 
 export default function Musician() {
   return (
@@ -72,15 +73,14 @@ export default function Musician() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <div className="bg-black rounded-lg aspect-[4/5] overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-black to-gray-800 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="text-sm">Artist Image</div>
-                    <div className="text-xs mt-1 opacity-70">
-                      Portrait in shadows
-                    </div>
-                  </div>
-                </div>
+              <div className="rounded-lg aspect-[4/5] overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757184869/the_soulmates/the_soulmates/artist-portrait.jpg"
+                  alt="JST.REA artist portrait in black and white, wearing a polo shirt with guitar strap"
+                  width={400}
+                  height={500}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

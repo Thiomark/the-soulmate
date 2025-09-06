@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Image from "next/image";
 
 export default function NeoSoul() {
   return (
@@ -22,15 +23,14 @@ export default function NeoSoul() {
 
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             <div className="flex-shrink-0 w-full lg:w-auto">
-              <div className="bg-black rounded-full aspect-square w-64 md:w-80 lg:w-96 mx-auto overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-black to-gray-800 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="text-sm">Artist Image</div>
-                    <div className="text-xs mt-1 opacity-70">
-                      Circular portrait
-                    </div>
-                  </div>
-                </div>
+              <div className="rounded-full aspect-square w-64 md:w-80 lg:w-96 mx-auto overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757184869/the_soulmates/the_soulmates/artist-portrait.jpg"
+                  alt="JST.REA artist portrait in circular frame, black and white aesthetic"
+                  width={384}
+                  height={384}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
