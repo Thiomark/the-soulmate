@@ -14,33 +14,21 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           <ServiceCard
             title="CREATIVE DIRECTION"
-            imageBg="bg-gradient-to-br from-gray-100 to-gray-200"
-          >
-            <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
-              <div className="w-8 h-8 bg-orange-200 rounded-full"></div>
-            </div>
-          </ServiceCard>
+            imageSrc="https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
+            imageAlt="Creative Direction - Record player with vinyl"
+          />
 
           <ServiceCard
             title="CLIENT TESTIMONIALS"
-            imageBg="bg-gradient-to-br from-orange-50 to-orange-100"
-          >
-            <div className="flex space-x-4">
-              <div className="w-12 h-8 bg-orange-300 rounded-full opacity-80"></div>
-              <div className="w-8 h-12 bg-gray-400 rounded-sm"></div>
-            </div>
-          </ServiceCard>
+            imageSrc="https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186360/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_cg1cos.jpg"
+            imageAlt="Client Testimonials - Abstract art painting with flowers"
+          />
 
           <ServiceCard
             title="PORTFOLIO"
-            imageBg="bg-gradient-to-br from-gray-50 to-gray-150"
-          >
-            <div className="flex space-x-3">
-              <div className="w-8 h-12 bg-gray-300 rounded-sm"></div>
-              <div className="w-6 h-16 bg-orange-200 rounded-sm transform rotate-12"></div>
-              <div className="w-10 h-10 bg-gray-400 rounded-full"></div>
-            </div>
-          </ServiceCard>
+            imageSrc="https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186345/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.42_mz5nmc.jpg"
+            imageAlt="Portfolio - Minimalist wooden hangers"
+          />
         </div>
       </div>
     </section>
