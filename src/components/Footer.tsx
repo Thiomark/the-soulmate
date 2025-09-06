@@ -8,12 +8,18 @@ const Footer = () => {
         <div className="text-2xl md:text-3xl font-light text-gray-800 mb-6">
           The soulmates
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-sm text-gray-600">
-          <Link href="/fashion" className="hover:text-gray-800 transition-colors">
-            Fashion
+        <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-6 text-sm text-gray-600">
+          <Link href="/" className="hover:text-gray-800 transition-colors">
+            Home
           </Link>
           <Link href="/musician" className="hover:text-gray-800 transition-colors">
-            Musician
+            About
+          </Link>
+          <Link href="/services" className="hover:text-gray-800 transition-colors">
+            Services
+          </Link>
+          <Link href="/fashion" className="hover:text-gray-800 transition-colors">
+            Fashion
           </Link>
           <Link href="/neo-soul" className="hover:text-gray-800 transition-colors">
             Neo Soul & RNB
