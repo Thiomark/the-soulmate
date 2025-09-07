@@ -15,7 +15,10 @@ const Header = () => {
   return (
     <header className="w-full py-6 px-4 md:px-8 lg:px-12">
       <nav className="flex justify-between items-center max-w-7xl mx-auto">
-        <Link href="/" className="text-2xl md:text-3xl font-light text-gray-800 hover:text-gray-600 transition-colors">
+        <Link
+          href="/"
+          className="text-2xl md:text-3xl font-light text-gray-800 hover:text-gray-600 transition-colors"
+        >
           The soulmates
         </Link>
         <div className="hidden md:flex space-x-6 lg:space-x-8 text-sm font-light tracking-wide">
@@ -29,25 +32,7 @@ const Header = () => {
             href="/musician"
             className="text-gray-600 hover:text-gray-800 transition-colors"
           >
-            ABOUT
-          </Link>
-          <Link
-            href="/services"
-            className="text-gray-600 hover:text-gray-800 transition-colors"
-          >
-            SERVICES
-          </Link>
-          <Link
-            href="/fashion"
-            className="text-gray-600 hover:text-gray-800 transition-colors"
-          >
-            FASHION
-          </Link>
-          <Link
-            href="/neo-soul"
-            className="text-gray-600 hover:text-gray-800 transition-colors"
-          >
-            NEO SOUL
+            ABOUT US
           </Link>
           <Link
             href="/contact"
@@ -57,7 +42,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="md:hidden">
-          <button 
+          <button
             onClick={toggleMobileMenu}
             className="text-gray-600 hover:text-gray-800 transition-colors"
             aria-label="Toggle mobile menu"
@@ -94,7 +79,7 @@ const Header = () => {
           </button>
         </div>
       </nav>
-      
+
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
