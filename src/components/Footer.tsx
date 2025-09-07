@@ -12,20 +12,35 @@ const Footer = () => {
           <Link href="/" className="hover:text-gray-800 transition-colors">
             Home
           </Link>
-          <Link href="/musician" className="hover:text-gray-800 transition-colors">
-            About
+          <Link
+            href="/musician"
+            className="hover:text-gray-800 transition-colors"
+          >
+            About Us
           </Link>
-          <Link href="/services" className="hover:text-gray-800 transition-colors">
-            Services
+          <Link
+            href="/services"
+            className="hover:text-gray-800 transition-colors"
+          >
+            music artist
           </Link>
-          <Link href="/fashion" className="hover:text-gray-800 transition-colors">
-            Fashion
+          <Link
+            href="/fashion"
+            className="hover:text-gray-800 transition-colors"
+          >
+            Art artist
           </Link>
-          <Link href="/neo-soul" className="hover:text-gray-800 transition-colors">
-            Neo Soul & RNB
+          <Link
+            href="/neo-soul"
+            className="hover:text-gray-800 transition-colors"
+          >
+            Fashion artist
           </Link>
-          <Link href="/contact" className="hover:text-gray-800 transition-colors">
-            Contact
+          <Link
+            href="/contact"
+            className="hover:text-gray-800 transition-colors"
+          >
+            Contact Us
           </Link>
         </div>
       </div>
