@@ -38,7 +38,7 @@ const Header = () => {
             href="/contact"
             className="text-gray-600 hover:text-gray-800 transition-colors"
           >
-            CONTACT
+            CONTACT US
           </Link>
         </div>
         <div className="md:hidden">
@@ -96,35 +96,14 @@ const Header = () => {
               onClick={closeMobileMenu}
               className="block text-gray-600 hover:text-gray-800 transition-colors py-2 text-sm font-light tracking-wide"
             >
-              ABOUT
-            </Link>
-            <Link
-              href="/services"
-              onClick={closeMobileMenu}
-              className="block text-gray-600 hover:text-gray-800 transition-colors py-2 text-sm font-light tracking-wide"
-            >
-              SERVICES
-            </Link>
-            <Link
-              href="/fashion"
-              onClick={closeMobileMenu}
-              className="block text-gray-600 hover:text-gray-800 transition-colors py-2 text-sm font-light tracking-wide"
-            >
-              FASHION
-            </Link>
-            <Link
-              href="/neo-soul"
-              onClick={closeMobileMenu}
-              className="block text-gray-600 hover:text-gray-800 transition-colors py-2 text-sm font-light tracking-wide"
-            >
-              NEO SOUL & RNB
+              ABOUT US
             </Link>
             <Link
               href="/contact"
               onClick={closeMobileMenu}
               className="block text-gray-600 hover:text-gray-800 transition-colors py-2 text-sm font-light tracking-wide"
             >
-              CONTACT
+              CONTACT US
             </Link>
           </div>
         </div>
