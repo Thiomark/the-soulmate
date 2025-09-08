@@ -67,7 +67,7 @@ const PulsingGradientCircle = () => {
   const colorString: string = `rgb(${interpolatedColor[0]}, ${interpolatedColor[1]}, ${interpolatedColor[2]})`;
 
   return (
-    <div className="min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center">
+    <div className="min-h-[65vh] flex items-center justify-center">
       {/* Hero Section */}
       <div className="relative text-center">
         {/* Main Circle with Smooth Color Morphing */}

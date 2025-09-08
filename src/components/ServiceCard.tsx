@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <Link href={href}>
       <div className="group cursor-pointer">
-        <div className="h-48 md:h-56 lg:h-64 rounded-lg mb-4 flex items-center justify-center transition-transform group-hover:scale-105 overflow-hidden relative">
+        <div className="aspect-[4/5] rounded-lg mb-4 flex items-center justify-center transition-transform group-hover:scale-105 overflow-hidden relative">
           <Image
             src={imageSrc}
             alt={imageAlt || title}

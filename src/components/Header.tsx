@@ -35,6 +35,12 @@ const Header = () => {
             ABOUT US
           </Link>
           <Link
+            href="/events"
+            className="text-gray-600 hover:text-gray-800 transition-colors"
+          >
+            EVENTS
+          </Link>
+          <Link
             href="/contact"
             className="text-gray-600 hover:text-gray-800 transition-colors"
           >
@@ -97,6 +103,13 @@ const Header = () => {
               className="block text-gray-600 hover:text-gray-800 transition-colors py-2 text-sm font-light tracking-wide"
             >
               ABOUT US
+            </Link>
+            <Link
+              href="/events"
+              onClick={closeMobileMenu}
+              className="block text-gray-600 hover:text-gray-800 transition-colors py-2 text-sm font-light tracking-wide"
+            >
+              EVENTS
             </Link>
             <Link
               href="/contact"
