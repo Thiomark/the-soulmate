@@ -305,9 +305,9 @@ export default function Events() {
                     height={300}
                     className="w-full h-full object-cover"
                   />
-                  <div className={`absolute top-4 left-4 px-3 py-1 ${categoryColors[event.category]} rounded-full`}>
+                  <div className={`absolute top-4 left-4 px-3 py-1 ${categoryColors[event.category as keyof typeof categoryColors]} rounded-full`}>
                     <span className="text-xs font-light tracking-[0.1em] text-white">
-                      {categoryLabels[event.category]}
+                      {categoryLabels[event.category as keyof typeof categoryLabels]}
                     </span>
                   </div>
                   <div className="absolute bottom-4 left-4 text-white">
