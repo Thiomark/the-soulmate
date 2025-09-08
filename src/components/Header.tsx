@@ -13,7 +13,7 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
   return (
-    <header className="w-full py-6 px-4 md:px-8 lg:px-12">
+    <header className="w-full bg-[#E5E0D8] py-6 px-4 md:px-8 lg:px-12">
       <nav className="flex justify-between items-center max-w-7xl mx-auto">
         <Link
           href="/"

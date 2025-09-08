@@ -1,13 +1,12 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import BackButton from "../../components/BackButton";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#E5E0D8]">
-      <Header />
-      
-      <main className="px-4 md:px-8 lg:px-12 py-8 md:py-16">
-        <div className="max-w-7xl mx-auto">
+    <div className="px-4 md:px-8 lg:px-12 py-8 md:py-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-8">
+          <BackButton />
+        </div>
           <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16">
             <div className="mb-4 md:mb-0">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-800 mb-2">
@@ -178,11 +177,8 @@ export default function Contact() {
                 bring your creative vision to life through music, fashion, and authentic storytelling.
               </p>
             </div>
-          </div>
         </div>
-      </main>
-
-      <Footer />
+      </div>
     </div>
   );
 }

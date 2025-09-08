@@ -67,13 +67,13 @@ const PulsingGradientCircle = () => {
   const colorString: string = `rgb(${interpolatedColor[0]}, ${interpolatedColor[1]}, ${interpolatedColor[2]})`;
 
   return (
-    <div className="min-h-[80vh] bg-gray-50 flex items-center justify-center">
+    <div className="min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center">
       {/* Hero Section */}
       <div className="relative text-center">
         {/* Main Circle with Smooth Color Morphing */}
-        <div className="relative w-96 h-96 mx-auto mb-8">
+        <div className="relative size-80 lg:size-96 mx-auto mb-8 px-8">
           <div
-            className="absolute inset-0 rounded-full slow-pulse"
+            className="absolute inset-0 rounded-full flex items-center justify-center slow-pulse"
             style={{
               background: `radial-gradient(circle, ${colorString
                 .replace("rgb", "rgba")
@@ -103,7 +103,11 @@ const PulsingGradientCircle = () => {
                 .replace("rgb", "rgba")
                 .replace(")", ", 0)")} 100%)`,
             }}
-          ></div>
+          >
+            <h1 className="text-lg font-bold text-gray-800 tracking-wide">
+              We believe in up coming artist.
+            </h1>
+          </div>
         </div>
       </div>
 
