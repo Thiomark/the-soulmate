@@ -182,14 +182,14 @@ export default function Events() {
   return (
     <div className="px-4 md:px-8 lg:px-12 py-16">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-start mb-16">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 sm:gap-0 mb-12 sm:mb-16">
           <div>
-            <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-2">
               UPCOMING EVENTS
             </h1>
             <div className="w-32 h-0.5 bg-gray-800"></div>
           </div>
-          <div className="text-4xl md:text-5xl font-light text-gray-800">
+          <div className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 text-center sm:text-right">
             CALENDAR
           </div>
         </div>
@@ -201,10 +201,10 @@ export default function Events() {
           </h2>
           
           {/* Category Filter */}
-          <div className="flex justify-center space-x-4 mb-6">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6">
             <button
               onClick={() => handleCategoryChange("all")}
-              className={`px-4 py-2 text-xs font-light tracking-[0.1em] transition-colors ${
+              className={`px-3 sm:px-4 py-2 text-xs font-light tracking-[0.1em] transition-colors min-h-[44px] ${
                 selectedCategory === "all" 
                   ? "bg-gray-800 text-white" 
                   : "text-gray-600 hover:text-gray-800"
@@ -214,7 +214,7 @@ export default function Events() {
             </button>
             <button
               onClick={() => handleCategoryChange("music")}
-              className={`flex items-center space-x-2 px-4 py-2 text-xs font-light tracking-[0.1em] transition-colors ${
+              className={`flex items-center space-x-2 px-3 sm:px-4 py-2 text-xs font-light tracking-[0.1em] transition-colors min-h-[44px] ${
                 selectedCategory === "music" 
                   ? "bg-[#4A90C2] text-white" 
                   : "text-gray-600 hover:text-gray-800"
@@ -225,7 +225,7 @@ export default function Events() {
             </button>
             <button
               onClick={() => handleCategoryChange("fashion")}
-              className={`flex items-center space-x-2 px-4 py-2 text-xs font-light tracking-[0.1em] transition-colors ${
+              className={`flex items-center space-x-2 px-3 sm:px-4 py-2 text-xs font-light tracking-[0.1em] transition-colors min-h-[44px] ${
                 selectedCategory === "fashion" 
                   ? "bg-[#E8B4B8] text-white" 
                   : "text-gray-600 hover:text-gray-800"
@@ -236,7 +236,7 @@ export default function Events() {
             </button>
             <button
               onClick={() => handleCategoryChange("art")}
-              className={`flex items-center space-x-2 px-4 py-2 text-xs font-light tracking-[0.1em] transition-colors ${
+              className={`flex items-center space-x-2 px-3 sm:px-4 py-2 text-xs font-light tracking-[0.1em] transition-colors min-h-[44px] ${
                 selectedCategory === "art" 
                   ? "bg-[#9B8A7F] text-white" 
                   : "text-gray-600 hover:text-gray-800"
@@ -249,10 +249,10 @@ export default function Events() {
 
           {/* Genre Filter */}
           {selectedCategory !== "all" && getAvailableGenres().length > 0 && (
-            <div className="flex justify-center space-x-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8">
               <button
                 onClick={() => setSelectedGenre("all")}
-                className={`px-3 py-1 text-xs font-light rounded-full transition-colors ${
+                className={`px-3 py-1 text-xs font-light rounded-full transition-colors min-h-[36px] ${
                   selectedGenre === "all" 
                     ? "bg-gray-200 text-gray-800" 
                     : "text-gray-500 hover:text-gray-700"
@@ -264,7 +264,7 @@ export default function Events() {
                 <button
                   key={genre}
                   onClick={() => setSelectedGenre(genre)}
-                  className={`px-3 py-1 text-xs font-light rounded-full transition-colors ${
+                  className={`px-3 py-1 text-xs font-light rounded-full transition-colors min-h-[36px] ${
                     selectedGenre === genre 
                       ? "bg-gray-200 text-gray-800" 
                       : "text-gray-500 hover:text-gray-700"
@@ -293,7 +293,7 @@ export default function Events() {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {filteredEvents.map((event) => (
             <Link key={event.id} href={`/events/${event.slug}`} className="group block">
               <div className="space-y-4">
@@ -324,11 +324,11 @@ export default function Events() {
                 </div>
                 
                 <div className="space-y-2">
-                  <div className="flex justify-between items-start">
-                    <h3 className="text-xl font-light text-gray-800 group-hover:text-[#4A90C2] transition-colors">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-0">
+                    <h3 className="text-lg sm:text-xl font-light text-gray-800 group-hover:text-[#4A90C2] transition-colors">
                       {event.title}
                     </h3>
-                    <div className="text-right">
+                    <div className="text-left sm:text-right">
                       <div className="text-lg font-light text-gray-800">
                         R{event.price.min}
                       </div>
@@ -337,7 +337,7 @@ export default function Events() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-xs font-light tracking-[0.1em] text-gray-600 uppercase">
+                  <p className="text-xs font-light tracking-[0.1em] text-gray-600 uppercase break-words">
                     {event.type} • {event.city}, {event.state}
                   </p>
                   <p className="text-sm text-gray-700 leading-relaxed">
