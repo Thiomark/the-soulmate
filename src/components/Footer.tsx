@@ -19,19 +19,19 @@ const Footer = () => {
             About Us
           </Link>
           <Link
-            href="/services"
+            href="/artists/music"
             className="hover:text-gray-800 transition-colors"
           >
             music artist
           </Link>
           <Link
-            href="/fashion"
+            href="/artists/art"
             className="hover:text-gray-800 transition-colors"
           >
             Art artist
           </Link>
           <Link
-            href="/neo-soul"
+            href="/artists/fashion"
             className="hover:text-gray-800 transition-colors"
           >
             Fashion artist
