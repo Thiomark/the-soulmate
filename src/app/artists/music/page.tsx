@@ -1,58 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const musicArtists = [
-  {
-    id: "jst-rea",
-    slug: "jst-rea",
-    name: "JST.REA",
-    genre: "R&B / Neo-Soul",
-    description: "Smooth melodies with raw stories - tender, bold, and always honest.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757184869/the_soulmates/the_soulmates/artist-portrait.jpg"
-  },
-  {
-    id: "soul-vibes",
-    slug: "soul-vibes",
-    name: "SOUL VIBES",
-    genre: "Soul / Blues",
-    description: "Deep, emotional soundscapes that touch the soul and move the spirit.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
-  },
-  {
-    id: "rhythm-collective",
-    slug: "rhythm-collective",
-    name: "RHYTHM COLLECTIVE",
-    genre: "Hip-Hop / R&B",
-    description: "Urban beats meet melodic storytelling in this dynamic collective.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
-  },
-  {
-    id: "melody-makers",
-    slug: "melody-makers",
-    name: "MELODY MAKERS",
-    genre: "Alternative R&B",
-    description: "Experimental sounds blending traditional R&B with modern production.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
-  },
-  {
-    id: "groove-theory",
-    slug: "groove-theory",
-    name: "GROOVE THEORY",
-    genre: "Funk / Soul",
-    description: "Classic funk rhythms with contemporary soul vocals and arrangements.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
-  },
-  {
-    id: "harmony-heights",
-    slug: "harmony-heights",
-    name: "HARMONY HEIGHTS",
-    genre: "Contemporary R&B",
-    description: "Soaring vocals and lush harmonies define this contemporary collective.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
-  }
-];
+async function getMusicArtists() {
+  // For now, return mock data to ensure the app runs
+  // You can enable CMS integration once your database is set up
+  return [
+    {
+      id: "jst-rea",
+      slug: "jst-rea",
+      name: "JST.REA",
+      bio: "Smooth melodies with raw stories - tender, bold, and always honest.",
+      image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757184869/the_soulmates/the_soulmates/artist-portrait.jpg"
+    },
+    {
+      id: "soul-vibes",
+      slug: "soul-vibes",
+      name: "SOUL VIBES",
+      bio: "Deep, emotional soundscapes that touch the soul and move the spirit.",
+      image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
+    },
+    {
+      id: "rhythm-collective",
+      slug: "rhythm-collective",
+      name: "RHYTHM COLLECTIVE",
+      bio: "Urban beats meet melodic storytelling in this dynamic collective.",
+      image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
+    },
+    {
+      id: "melody-makers",
+      slug: "melody-makers",
+      name: "MELODY MAKERS",
+      bio: "Experimental sounds blending traditional R&B with modern production.",
+      image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
+    }
+  ];
+}
 
-export default function MusicArtists() {
+export default async function MusicArtists() {
+  const musicArtists = await getMusicArtists();
   return (
     <div className="px-4 md:px-8 lg:px-12 py-16">
       <div className="max-w-7xl mx-auto">
@@ -80,7 +65,7 @@ export default function MusicArtists() {
               <div className="space-y-4">
                 <div className="aspect-[4/5] rounded-lg overflow-hidden group-hover:scale-105 transition-transform">
                   <Image
-                    src={artist.image}
+                    src={artist.image || "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"}
                     alt={artist.name}
                     width={300}
                     height={375}
@@ -93,10 +78,10 @@ export default function MusicArtists() {
                     {artist.name}
                   </h3>
                   <p className="text-xs font-light tracking-[0.1em] text-gray-600 uppercase">
-                    {artist.genre}
+                    MUSIC
                   </p>
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    {artist.description}
+                    {typeof artist.bio === 'string' ? artist.bio : 'Talented musician creating beautiful sounds.'}
                   </p>
                 </div>
               </div>
