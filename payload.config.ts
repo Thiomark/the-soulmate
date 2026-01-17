@@ -33,6 +33,13 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    livePreview: {
+      breakpoints: [
+        { label: 'Mobile', name: 'mobile', width: 375, height: 667 },
+        { label: 'Tablet', name: 'tablet', width: 768, height: 1024 },
+        { label: 'Desktop', name: 'desktop', width: 1440, height: 900 },
+      ],
+    },
   },
   collections: [
     {
@@ -49,6 +56,13 @@ export default buildConfig({
       slug: 'artists',
       admin: {
         useAsTitle: 'name',
+        livePreview: {
+          url: ({ data }) => {
+            const category = data?.category || 'music'
+            const slug = data?.slug || ''
+            return `${getServerURL()}/artists/${category}/${slug}`
+          },
+        },
       },
       fields: [
         {
@@ -346,6 +360,12 @@ export default buildConfig({
       slug: 'events',
       admin: {
         useAsTitle: 'title',
+        livePreview: {
+          url: ({ data }) => {
+            const slug = data?.slug || ''
+            return `${getServerURL()}/events/${slug}`
+          },
+        },
       },
       fields: [
         {

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { draftMode } from "next/headers";
 import BackButton from "@/components/BackButton";
+import { LivePreviewListener } from "@/components/LivePreviewListener";
 import { getPayload } from 'payload'
 import config from '../../../../../../payload.config'
 import { Artist, extractRichText, RichTextNode, GalleryImage, Artwork, Exhibition } from '@/types/payload'
@@ -55,6 +57,7 @@ interface Props {
 export default async function ArtArtistDetail({ params }: Props) {
   const { slug } = await params;
   const artist = await getArtArtist(slug);
+  const { isEnabled: isDraftMode } = await draftMode();
 
   if (!artist) {
     notFound();
@@ -62,6 +65,7 @@ export default async function ArtArtistDetail({ params }: Props) {
 
   return (
     <div className="px-4 md:px-8 lg:px-12 py-8 md:py-16">
+      {isDraftMode && <LivePreviewListener />}
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <BackButton />
