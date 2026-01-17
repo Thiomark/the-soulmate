@@ -11,10 +11,10 @@
     "seed": "tsx --env-file=.env.local scripts/seed-data.ts"
   },
   "dependencies": {
-    "@payloadcms/db-postgres": "^3.62.1",
-    "@payloadcms/drizzle": "^3.62.1",
-    "@payloadcms/next": "^3.62.1",
-    "@payloadcms/richtext-lexical": "^3.62.1",
+    "@payloadcms/db-postgres": "3.72.0",
+    "@payloadcms/drizzle": "3.72.0",
+    "@payloadcms/next": "3.72.0",
+    "@payloadcms/richtext-lexical": "3.72.0",
     "@types/better-sqlite3": "^7.6.13",
     "@types/pg": "^8.15.6",
     "better-sqlite3": "^12.4.1",
@@ -23,7 +23,7 @@
     "drizzle-kit": "^0.31.6",
     "drizzle-orm": "^0.44.7",
     "next": "15.5.2",
-    "payload": "^3.62.1",
+    "payload": "3.72.0",
     "pg": "^8.16.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",

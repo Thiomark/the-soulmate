@@ -6,17 +6,17 @@ settings:
 
 dependencies:
   '@payloadcms/db-postgres':
-    specifier: ^3.62.1
-    version: 3.62.1(@types/better-sqlite3@7.6.13)(better-sqlite3@12.6.2)(payload@3.62.1)
+    specifier: 3.72.0
+    version: 3.72.0(@types/better-sqlite3@7.6.13)(better-sqlite3@12.6.2)(payload@3.72.0)
   '@payloadcms/drizzle':
-    specifier: ^3.62.1
-    version: 3.62.1(@types/better-sqlite3@7.6.13)(@types/pg@8.16.0)(better-sqlite3@12.6.2)(payload@3.62.1)(pg@8.16.3)
+    specifier: 3.72.0
+    version: 3.72.0(@types/better-sqlite3@7.6.13)(@types/pg@8.16.0)(better-sqlite3@12.6.2)(payload@3.72.0)(pg@8.16.3)
   '@payloadcms/next':
-    specifier: ^3.62.1
-    version: 3.72.0(@types/react@19.2.2)(graphql@16.12.0)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.62.1)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)
+    specifier: 3.72.0
+    version: 3.72.0(@types/react@19.2.2)(graphql@16.12.0)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.72.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)
   '@payloadcms/richtext-lexical':
-    specifier: ^3.62.1
-    version: 3.72.0(@faceless-ui/modal@3.0.0)(@faceless-ui/scroll-info@2.0.0)(@payloadcms/next@3.72.0)(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.62.1)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)(yjs@13.6.29)
+    specifier: 3.72.0
+    version: 3.72.0(@faceless-ui/modal@3.0.0)(@faceless-ui/scroll-info@2.0.0)(@payloadcms/next@3.72.0)(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.72.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)(yjs@13.6.29)
   '@types/better-sqlite3':
     specifier: ^7.6.13
     version: 7.6.13
@@ -42,8 +42,8 @@ dependencies:
     specifier: 15.5.2
     version: 15.5.2(@playwright/test@1.57.0)(react-dom@19.1.0)(react@19.1.0)(sass@1.97.2)
   payload:
-    specifier: ^3.62.1
-    version: 3.62.1(graphql@16.12.0)(typescript@5.9.3)
+    specifier: 3.72.0
+    version: 3.72.0(graphql@16.12.0)(typescript@5.9.3)
   pg:
     specifier: ^8.16.3
     version: 8.16.3
@@ -1710,17 +1710,17 @@ packages:
     dev: false
     optional: true
 
-  /@payloadcms/db-postgres@3.62.1(@types/better-sqlite3@7.6.13)(better-sqlite3@12.6.2)(payload@3.62.1):
-    resolution: {integrity: sha512-wKtzONcgRKZG93vAMa8zcp6ataBchqOrc+3GbGYlrOZ89Z32xvhU6Kso1srWShF7bT6yTus3U4Kur0vY+SNw/w==}
+  /@payloadcms/db-postgres@3.72.0(@types/better-sqlite3@7.6.13)(better-sqlite3@12.6.2)(payload@3.72.0):
+    resolution: {integrity: sha512-RzehHdDupPUeA8eSaGDQVqJMvcgRukEaIAKF2KMI32FTlwjeeCprhs1IOVDYD9dGgyADpXMfqyTVqyB8Fdea2A==}
     peerDependencies:
-      payload: 3.62.1
+      payload: 3.72.0
     dependencies:
-      '@payloadcms/drizzle': 3.62.1(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(payload@3.62.1)(pg@8.16.3)
+      '@payloadcms/drizzle': 3.72.0(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(payload@3.72.0)(pg@8.16.3)
       '@types/pg': 8.10.2
       console-table-printer: 2.12.1
-      drizzle-kit: 0.31.5
-      drizzle-orm: 0.44.6(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(pg@8.16.3)
-      payload: 3.62.1(graphql@16.12.0)(typescript@5.9.3)
+      drizzle-kit: 0.31.7
+      drizzle-orm: 0.44.7(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(pg@8.16.3)
+      payload: 3.72.0(graphql@16.12.0)(typescript@5.9.3)
       pg: 8.16.3
       prompts: 2.4.2
       to-snake-case: 1.0.0
@@ -1757,15 +1757,15 @@ packages:
       - supports-color
     dev: false
 
-  /@payloadcms/drizzle@3.62.1(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(payload@3.62.1)(pg@8.16.3):
-    resolution: {integrity: sha512-7whE2XrgpRx/hDGPl3i3/WxzZQQUPiT+zHrKpb+wwoGVFtQkUkSS9JDTHnOS/XGXxwkmJMQfCmIqgxO48UIaWw==}
+  /@payloadcms/drizzle@3.72.0(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(payload@3.72.0)(pg@8.16.3):
+    resolution: {integrity: sha512-X8Wo3WbLASeceMaixqOWqNqQ9YOiXTiE08V8nlbODWh3CO8026vU2oqPz7YKKKb5aVX1dirg5uArExAWZrmYuQ==}
     peerDependencies:
-      payload: 3.62.1
+      payload: 3.72.0
     dependencies:
       console-table-printer: 2.12.1
       dequal: 2.0.3
-      drizzle-orm: 0.44.6(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(pg@8.16.3)
-      payload: 3.62.1(graphql@16.12.0)(typescript@5.9.3)
+      drizzle-orm: 0.44.7(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(pg@8.16.3)
+      payload: 3.72.0(graphql@16.12.0)(typescript@5.9.3)
       prompts: 2.4.2
       to-snake-case: 1.0.0
       uuid: 9.0.0
@@ -1801,15 +1801,15 @@ packages:
       - sqlite3
     dev: false
 
-  /@payloadcms/drizzle@3.62.1(@types/better-sqlite3@7.6.13)(@types/pg@8.16.0)(better-sqlite3@12.6.2)(payload@3.62.1)(pg@8.16.3):
-    resolution: {integrity: sha512-7whE2XrgpRx/hDGPl3i3/WxzZQQUPiT+zHrKpb+wwoGVFtQkUkSS9JDTHnOS/XGXxwkmJMQfCmIqgxO48UIaWw==}
+  /@payloadcms/drizzle@3.72.0(@types/better-sqlite3@7.6.13)(@types/pg@8.16.0)(better-sqlite3@12.6.2)(payload@3.72.0)(pg@8.16.3):
+    resolution: {integrity: sha512-X8Wo3WbLASeceMaixqOWqNqQ9YOiXTiE08V8nlbODWh3CO8026vU2oqPz7YKKKb5aVX1dirg5uArExAWZrmYuQ==}
     peerDependencies:
-      payload: 3.62.1
+      payload: 3.72.0
     dependencies:
       console-table-printer: 2.12.1
       dequal: 2.0.3
-      drizzle-orm: 0.44.6(@types/better-sqlite3@7.6.13)(@types/pg@8.16.0)(better-sqlite3@12.6.2)(pg@8.16.3)
-      payload: 3.62.1(graphql@16.12.0)(typescript@5.9.3)
+      drizzle-orm: 0.44.7(@types/better-sqlite3@7.6.13)(@types/pg@8.16.0)(better-sqlite3@12.6.2)(pg@8.16.3)
+      payload: 3.72.0(graphql@16.12.0)(typescript@5.9.3)
       prompts: 2.4.2
       to-snake-case: 1.0.0
       uuid: 9.0.0
@@ -1845,7 +1845,7 @@ packages:
       - sqlite3
     dev: false
 
-  /@payloadcms/graphql@3.72.0(graphql@16.12.0)(payload@3.62.1)(typescript@5.9.3):
+  /@payloadcms/graphql@3.72.0(graphql@16.12.0)(payload@3.72.0)(typescript@5.9.3):
     resolution: {integrity: sha512-ciLr5cNBxLoB0N+KmoXaBue/ZIieok4Xtgfn8Wdg1KuqG9rpBRTJrQdv580WubcO45j9qJVo4m89eeeZm8Pp3g==}
     hasBin: true
     peerDependencies:
@@ -1854,7 +1854,7 @@ packages:
     dependencies:
       graphql: 16.12.0
       graphql-scalars: 1.22.2(graphql@16.12.0)
-      payload: 3.62.1(graphql@16.12.0)(typescript@5.9.3)
+      payload: 3.72.0(graphql@16.12.0)(typescript@5.9.3)
       pluralize: 8.0.0
       ts-essentials: 10.0.3(typescript@5.9.3)
       tsx: 4.20.6
@@ -1862,7 +1862,7 @@ packages:
       - typescript
     dev: false
 
-  /@payloadcms/next@3.72.0(@types/react@19.2.2)(graphql@16.12.0)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.62.1)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3):
+  /@payloadcms/next@3.72.0(@types/react@19.2.2)(graphql@16.12.0)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.72.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3):
     resolution: {integrity: sha512-2/ng6iL/auwqWVj+hKixnYE6/ECs7ZRf1pieJaQT/T8T4gZrY2KiQjjRIFs5Zp1clfY/6tQq5BmBiXO6dypnkA==}
     engines: {node: ^18.20.2 || >=20.9.0}
     peerDependencies:
@@ -1873,9 +1873,9 @@ packages:
       '@dnd-kit/core': 6.3.1(react-dom@19.1.0)(react@19.1.0)
       '@dnd-kit/modifiers': 9.0.0(@dnd-kit/core@6.3.1)(react@19.1.0)
       '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1)(react@19.1.0)
-      '@payloadcms/graphql': 3.72.0(graphql@16.12.0)(payload@3.62.1)(typescript@5.9.3)
+      '@payloadcms/graphql': 3.72.0(graphql@16.12.0)(payload@3.72.0)(typescript@5.9.3)
       '@payloadcms/translations': 3.72.0
-      '@payloadcms/ui': 3.72.0(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.62.1)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)
+      '@payloadcms/ui': 3.72.0(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.72.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)
       busboy: 1.6.0
       dequal: 2.0.3
       file-type: 19.3.0
@@ -1885,7 +1885,7 @@ packages:
       http-status: 2.1.0
       next: 15.5.2(@playwright/test@1.57.0)(react-dom@19.1.0)(react@19.1.0)(sass@1.97.2)
       path-to-regexp: 6.3.0
-      payload: 3.62.1(graphql@16.12.0)(typescript@5.9.3)
+      payload: 3.72.0(graphql@16.12.0)(typescript@5.9.3)
       qs-esm: 7.0.2
       sass: 1.77.4
       uuid: 10.0.0
@@ -1898,7 +1898,7 @@ packages:
       - typescript
     dev: false
 
-  /@payloadcms/richtext-lexical@3.72.0(@faceless-ui/modal@3.0.0)(@faceless-ui/scroll-info@2.0.0)(@payloadcms/next@3.72.0)(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.62.1)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)(yjs@13.6.29):
+  /@payloadcms/richtext-lexical@3.72.0(@faceless-ui/modal@3.0.0)(@faceless-ui/scroll-info@2.0.0)(@payloadcms/next@3.72.0)(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.72.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)(yjs@13.6.29):
     resolution: {integrity: sha512-GJfEsMGpDt5jbFuoqQvdiICGd1slaBOPSHtn+hnmQvaZCFaFR5fG3pP2Weux9O2ViKppN5fNm/01VZiDf9rWhg==}
     engines: {node: ^18.20.2 || >=20.9.0}
     peerDependencies:
@@ -1922,9 +1922,9 @@ packages:
       '@lexical/selection': 0.35.0
       '@lexical/table': 0.35.0
       '@lexical/utils': 0.35.0
-      '@payloadcms/next': 3.72.0(@types/react@19.2.2)(graphql@16.12.0)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.62.1)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)
+      '@payloadcms/next': 3.72.0(@types/react@19.2.2)(graphql@16.12.0)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.72.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)
       '@payloadcms/translations': 3.72.0
-      '@payloadcms/ui': 3.72.0(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.62.1)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)
+      '@payloadcms/ui': 3.72.0(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.72.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3)
       '@types/uuid': 10.0.0
       acorn: 8.12.1
       bson-objectid: 2.0.4
@@ -1936,7 +1936,7 @@ packages:
       mdast-util-from-markdown: 2.0.2
       mdast-util-mdx-jsx: 3.1.3
       micromark-extension-mdx-jsx: 3.0.1
-      payload: 3.62.1(graphql@16.12.0)(typescript@5.9.3)
+      payload: 3.72.0(graphql@16.12.0)(typescript@5.9.3)
       qs-esm: 7.0.2
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -1952,19 +1952,13 @@ packages:
       - yjs
     dev: false
 
-  /@payloadcms/translations@3.62.1:
-    resolution: {integrity: sha512-gamS7t8b9UmHOPl2uSzisJbehkaMiXOVuvmb0gGdR3kPqBq2wiqOV7G0zFFRda/efm6yZ1WxtrzqwnwhLD/ihA==}
-    dependencies:
-      date-fns: 4.1.0
-    dev: false
-
   /@payloadcms/translations@3.72.0:
     resolution: {integrity: sha512-oV9zoyQkKwif8n3/9lFTu9cTeVv4QJ0h73cjQB4SQncvNweUyTxUDaEjTg/u8nrjcktOQNdSI27cxirX11EiDA==}
     dependencies:
       date-fns: 4.1.0
     dev: false
 
-  /@payloadcms/ui@3.72.0(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.62.1)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3):
+  /@payloadcms/ui@3.72.0(@types/react@19.2.2)(monaco-editor@0.55.1)(next@15.5.2)(payload@3.72.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.9.3):
     resolution: {integrity: sha512-RCH6IpRKm1nr+H7JYGXw3fi4h89+TXzwOt5E7R0dnEd6BAPNdXx9/TU5nfnNdV/gLS5o9w3Mf7JV0OE7cC+1DQ==}
     engines: {node: ^18.20.2 || >=20.9.0}
     peerDependencies:
@@ -1988,7 +1982,7 @@ packages:
       md5: 2.3.0
       next: 15.5.2(@playwright/test@1.57.0)(react-dom@19.1.0)(react@19.1.0)(sass@1.97.2)
       object-to-formdata: 4.5.1
-      payload: 3.62.1(graphql@16.12.0)(typescript@5.9.3)
+      payload: 3.72.0(graphql@16.12.0)(typescript@5.9.3)
       qs-esm: 7.0.2
       react: 19.1.0
       react-datepicker: 7.6.0(react-dom@19.1.0)(react@19.1.0)
@@ -3228,8 +3222,8 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /drizzle-kit@0.31.5:
-    resolution: {integrity: sha512-+CHgPFzuoTQTt7cOYCV6MOw2w8vqEn/ap1yv4bpZOWL03u7rlVRQhUY0WYT3rHsgVTXwYQDZaSUJSQrMBUKuWg==}
+  /drizzle-kit@0.31.7:
+    resolution: {integrity: sha512-hOzRGSdyKIU4FcTSFYGKdXEjFsncVwHZ43gY3WU5Bz9j5Iadp6Rh6hxLSQ1IWXpKLBKt/d5y1cpSPcV+FcoQ1A==}
     hasBin: true
     dependencies:
       '@drizzle-team/brocli': 0.10.2
@@ -3252,8 +3246,8 @@ packages:
       - supports-color
     dev: false
 
-  /drizzle-orm@0.44.6(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(pg@8.16.3):
-    resolution: {integrity: sha512-uy6uarrrEOc9K1u5/uhBFJbdF5VJ5xQ/Yzbecw3eAYOunv5FDeYkR2m8iitocdHBOHbvorviKOW5GVw0U1j4LQ==}
+  /drizzle-orm@0.44.7(@types/better-sqlite3@7.6.13)(@types/pg@8.10.2)(better-sqlite3@12.6.2)(pg@8.16.3):
+    resolution: {integrity: sha512-quIpnYznjU9lHshEOAYLoZ9s3jweleHlZIAWR/jX9gAWNg/JhQ1wj0KGRf7/Zm+obRrYd9GjPVJg790QY9N5AQ==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=4'
@@ -3346,104 +3340,6 @@ packages:
     dependencies:
       '@types/better-sqlite3': 7.6.13
       '@types/pg': 8.10.2
-      better-sqlite3: 12.6.2
-      pg: 8.16.3
-    dev: false
-
-  /drizzle-orm@0.44.6(@types/better-sqlite3@7.6.13)(@types/pg@8.16.0)(better-sqlite3@12.6.2)(pg@8.16.3):
-    resolution: {integrity: sha512-uy6uarrrEOc9K1u5/uhBFJbdF5VJ5xQ/Yzbecw3eAYOunv5FDeYkR2m8iitocdHBOHbvorviKOW5GVw0U1j4LQ==}
-    peerDependencies:
-      '@aws-sdk/client-rds-data': '>=3'
-      '@cloudflare/workers-types': '>=4'
-      '@electric-sql/pglite': '>=0.2.0'
-      '@libsql/client': '>=0.10.0'
-      '@libsql/client-wasm': '>=0.10.0'
-      '@neondatabase/serverless': '>=0.10.0'
-      '@op-engineering/op-sqlite': '>=2'
-      '@opentelemetry/api': ^1.4.1
-      '@planetscale/database': '>=1.13'
-      '@prisma/client': '*'
-      '@tidbcloud/serverless': '*'
-      '@types/better-sqlite3': '*'
-      '@types/pg': '*'
-      '@types/sql.js': '*'
-      '@upstash/redis': '>=1.34.7'
-      '@vercel/postgres': '>=0.8.0'
-      '@xata.io/client': '*'
-      better-sqlite3: '>=7'
-      bun-types: '*'
-      expo-sqlite: '>=14.0.0'
-      gel: '>=2'
-      knex: '*'
-      kysely: '*'
-      mysql2: '>=2'
-      pg: '>=8'
-      postgres: '>=3'
-      prisma: '*'
-      sql.js: '>=1'
-      sqlite3: '>=5'
-    peerDependenciesMeta:
-      '@aws-sdk/client-rds-data':
-        optional: true
-      '@cloudflare/workers-types':
-        optional: true
-      '@electric-sql/pglite':
-        optional: true
-      '@libsql/client':
-        optional: true
-      '@libsql/client-wasm':
-        optional: true
-      '@neondatabase/serverless':
-        optional: true
-      '@op-engineering/op-sqlite':
-        optional: true
-      '@opentelemetry/api':
-        optional: true
-      '@planetscale/database':
-        optional: true
-      '@prisma/client':
-        optional: true
-      '@tidbcloud/serverless':
-        optional: true
-      '@types/better-sqlite3':
-        optional: true
-      '@types/pg':
-        optional: true
-      '@types/sql.js':
-        optional: true
-      '@upstash/redis':
-        optional: true
-      '@vercel/postgres':
-        optional: true
-      '@xata.io/client':
-        optional: true
-      better-sqlite3:
-        optional: true
-      bun-types:
-        optional: true
-      expo-sqlite:
-        optional: true
-      gel:
-        optional: true
-      knex:
-        optional: true
-      kysely:
-        optional: true
-      mysql2:
-        optional: true
-      pg:
-        optional: true
-      postgres:
-        optional: true
-      prisma:
-        optional: true
-      sql.js:
-        optional: true
-      sqlite3:
-        optional: true
-    dependencies:
-      '@types/better-sqlite3': 7.6.13
-      '@types/pg': 8.16.0
       better-sqlite3: 12.6.2
       pg: 8.16.3
     dev: false
@@ -5622,15 +5518,15 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /payload@3.62.1(graphql@16.12.0)(typescript@5.9.3):
-    resolution: {integrity: sha512-m3chooHtwhevUFIlTfduZ2h73708ZxaiA7MuxMn91zqMgwpuPFLjkXrmaBSw4p+PgPzbJ2QPldvP9kv45rI/dA==}
+  /payload@3.72.0(graphql@16.12.0)(typescript@5.9.3):
+    resolution: {integrity: sha512-e31n0dJP7h2bR8YR2SbajzuLWAQ3OvZwrZJCSsN1IjZB5k+Se/lPkNZ383UAhwZj7OHog1kkZieaBnSQ33tvmw==}
     engines: {node: ^18.20.2 || >=20.9.0}
     hasBin: true
     peerDependencies:
       graphql: ^16.8.1
     dependencies:
       '@next/env': 15.5.6
-      '@payloadcms/translations': 3.62.1
+      '@payloadcms/translations': 3.72.0
       '@types/busboy': 1.5.4
       ajv: 8.17.1
       bson-objectid: 2.0.4
@@ -5654,11 +5550,12 @@ packages:
       pino-pretty: 13.1.2
       pluralize: 8.0.0
       qs-esm: 7.0.2
+      range-parser: 1.2.1
       sanitize-filename: 1.6.3
       scmp: 2.1.0
       ts-essentials: 10.0.3(typescript@5.9.3)
       tsx: 4.20.3
-      undici: 7.10.0
+      undici: 7.18.2
       uuid: 10.0.0
       ws: 8.18.3
     transitivePeerDependencies:
@@ -5985,6 +5882,11 @@ packages:
 
   /quick-format-unescaped@4.0.4:
     resolution: {integrity: sha512-tYC1Q1hgyRuHgloV/YXs2w15unPVh8qfu/qCTfhTYamaw7fyhumKa2yGpdSo87vY32rIclj+4fWYQXUMs9EHvg==}
+    dev: false
+
+  /range-parser@1.2.1:
+    resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
+    engines: {node: '>= 0.6'}
     dev: false
 
   /rc@1.2.8:
@@ -6831,8 +6733,8 @@ packages:
   /undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
-  /undici@7.10.0:
-    resolution: {integrity: sha512-u5otvFBOBZvmdjWLVW+5DAc9Nkq8f24g0O9oY7qw2JVIF1VocIFoyz9JFkuVOS2j41AufeO0xnlweJ2RLT8nGw==}
+  /undici@7.18.2:
+    resolution: {integrity: sha512-y+8YjDFzWdQlSE9N5nzKMT3g4a5UBX1HKowfdXh0uvAnTaqqwqB92Jt4UXBAeKekDs5IaDKyJFR4X1gYVCgXcw==}
     engines: {node: '>=20.18.1'}
     dev: false
 
