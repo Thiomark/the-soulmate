@@ -1,0 +1,20 @@
+{
+  "category": "Uncategorized",
+  "description": "check if we have payloadcms installed on this app and install it if we do not have it yet, and replace all hard coded data with data from cms, so seed data to payload cms, and test that data is there, check before vist all mock data and seed that mock data, so that users can update data instead of having to hard code it each time\n\n# keep Neon credentials secure: do not expose them to client-side code\n\nDATABASE_URL='postgresql://neondb_owner:npg_kgeu7Al2WQfY@ep-noisy-sound-a465mal7-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'",
+  "steps": [
+    "cpnfirm that you can vist  /artists/art/botanical-beauty,http://localhost:3000/admin and http://localhost:3000/artists/art/botanical-beauty"
+  ],
+  "images": [],
+  "imagePaths": [],
+  "skipTests": true,
+  "model": "sonnet",
+  "thinkingLevel": "none",
+  "branchName": "main",
+  "priority": 1,
+  "planningMode": "skip",
+  "requirePlanApproval": false,
+  "status": "backlog",
+  "id": "feature-1766126132416-ut6aexzic",
+  "startedAt": "2025-12-19T07:33:05.127Z",
+  "updatedAt": "2025-12-19T07:33:15.642Z"
+}

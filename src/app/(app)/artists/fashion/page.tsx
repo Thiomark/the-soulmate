@@ -1,58 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getPayload } from 'payload'
+import config from '../../../../../payload.config'
+import { Artist, extractRichText, RichTextNode } from '@/types/payload'
 
-const fashionArtists = [
-  {
-    id: "jst-rea-fashion",
-    slug: "jst-rea",
-    name: "JST.REA",
-    specialty: "Streetwear / Contemporary",
-    description: "Where rhythm meets fabric - bold, clean, and unapologetically authentic fashion.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757184868/the_soulmates/the_soulmates/fashion-striped-outfit.jpg"
-  },
-  {
-    id: "avant-garde-collective",
-    slug: "avant-garde-collective",
-    name: "AVANT-GARDE COLLECTIVE",
-    specialty: "High Fashion / Couture",
-    description: "Pushing boundaries with experimental designs and unconventional materials.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186345/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.42_mz5nmc.jpg"
-  },
-  {
-    id: "sustainable-style",
-    slug: "sustainable-style",
-    name: "SUSTAINABLE STYLE",
-    specialty: "Eco Fashion / Sustainable",
-    description: "Environmentally conscious fashion without compromising on style or quality.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186345/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.42_mz5nmc.jpg"
-  },
-  {
-    id: "vintage-revival",
-    slug: "vintage-revival",
-    name: "VINTAGE REVIVAL",
-    specialty: "Vintage / Retro",
-    description: "Reimagining classic styles with modern twists and contemporary fits.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186345/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.42_mz5nmc.jpg"
-  },
-  {
-    id: "minimalist-approach",
-    slug: "minimalist-approach",
-    name: "MINIMALIST APPROACH",
-    specialty: "Minimalism / Clean Lines",
-    description: "Less is more - sophisticated simplicity in every carefully crafted piece.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186345/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.42_mz5nmc.jpg"
-  },
-  {
-    id: "cultural-fusion",
-    slug: "cultural-fusion",
-    name: "CULTURAL FUSION",
-    specialty: "Cultural / Traditional",
-    description: "Celebrating heritage through contemporary interpretations of traditional wear.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186345/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.42_mz5nmc.jpg"
+async function getFashionArtists(): Promise<Artist[]> {
+  try {
+    const payload = await getPayload({ config })
+
+    const { docs: artists } = await payload.find({
+      collection: 'artists',
+      where: {
+        category: {
+          equals: 'fashion'
+        }
+      }
+    })
+
+    return artists as unknown as Artist[]
+  } catch (error) {
+    console.error('Error fetching fashion artists:', error)
+    return []
   }
-];
+}
 
-export default function FashionArtists() {
+export default async function FashionArtists() {
+  const fashionArtists = await getFashionArtists();
+  
   return (
     <div className="px-4 md:px-8 lg:px-12 py-16">
       <div className="max-w-7xl mx-auto">
@@ -80,7 +54,7 @@ export default function FashionArtists() {
               <div className="space-y-4">
                 <div className="aspect-[3/4] rounded-lg overflow-hidden group-hover:scale-105 transition-transform">
                   <Image
-                    src={artist.image}
+                    src={artist.image || "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186345/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.42_mz5nmc.jpg"}
                     alt={artist.name}
                     width={300}
                     height={400}
@@ -93,10 +67,10 @@ export default function FashionArtists() {
                     {artist.name}
                   </h3>
                   <p className="text-xs font-light tracking-[0.1em] text-gray-600 uppercase">
-                    {artist.specialty}
+                    FASHION
                   </p>
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    {artist.description}
+                    {artist.shortDescription || extractRichText(artist.bio as RichTextNode, 'Fashion designer creating innovative styles.')}
                   </p>
                 </div>
               </div>

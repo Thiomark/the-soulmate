@@ -1,39 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getPayload } from 'payload'
+import config from '../../../../../payload.config'
+import { Artist, extractRichText, RichTextNode } from '@/types/payload'
 
-async function getMusicArtists() {
-  // For now, return mock data to ensure the app runs
-  // You can enable CMS integration once your database is set up
-  return [
-    {
-      id: "jst-rea",
-      slug: "jst-rea",
-      name: "JST.REA",
-      bio: "Smooth melodies with raw stories - tender, bold, and always honest.",
-      image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757184869/the_soulmates/the_soulmates/artist-portrait.jpg"
-    },
-    {
-      id: "soul-vibes",
-      slug: "soul-vibes",
-      name: "SOUL VIBES",
-      bio: "Deep, emotional soundscapes that touch the soul and move the spirit.",
-      image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
-    },
-    {
-      id: "rhythm-collective",
-      slug: "rhythm-collective",
-      name: "RHYTHM COLLECTIVE",
-      bio: "Urban beats meet melodic storytelling in this dynamic collective.",
-      image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
-    },
-    {
-      id: "melody-makers",
-      slug: "melody-makers",
-      name: "MELODY MAKERS",
-      bio: "Experimental sounds blending traditional R&B with modern production.",
-      image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186361/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_1_qzk4ow.jpg"
-    }
-  ];
+async function getMusicArtists(): Promise<Artist[]> {
+  try {
+    const payload = await getPayload({ config })
+
+    const { docs: artists } = await payload.find({
+      collection: 'artists',
+      where: {
+        category: {
+          equals: 'music'
+        }
+      }
+    })
+
+    return artists as unknown as Artist[]
+  } catch (error) {
+    console.error('Error fetching music artists:', error)
+    return []
+  }
 }
 
 export default async function MusicArtists() {
@@ -81,7 +69,7 @@ export default async function MusicArtists() {
                     MUSIC
                   </p>
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    {typeof artist.bio === 'string' ? artist.bio : 'Talented musician creating beautiful sounds.'}
+                    {artist.shortDescription || extractRichText(artist.bio as RichTextNode, 'Talented musician creating beautiful sounds.')}
                   </p>
                 </div>
               </div>

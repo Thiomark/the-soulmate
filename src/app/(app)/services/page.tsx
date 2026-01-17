@@ -1,5 +1,5 @@
-import ServicesSection from "../../components/ServicesSection";
-import BackButton from "../../components/BackButton";
+import ServicesSection from "@/components/ServicesSection";
+import BackButton from "@/components/BackButton";
 
 export default function Services() {
   return (

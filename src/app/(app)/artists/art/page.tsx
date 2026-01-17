@@ -1,58 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getPayload } from 'payload'
+import config from '../../../../../payload.config'
+import { Artist, extractRichText, RichTextNode } from '@/types/payload'
 
-const artArtists = [
-  {
-    id: "abstract-visions",
-    slug: "abstract-visions",
-    name: "ABSTRACT VISIONS",
-    medium: "Mixed Media / Abstract",
-    description: "Bold abstract compositions that challenge perception and emotion.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186360/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_cg1cos.jpg"
-  },
-  {
-    id: "color-theory",
-    slug: "color-theory",
-    name: "COLOR THEORY",
-    medium: "Acrylic / Canvas",
-    description: "Vibrant color studies exploring the psychology of hue and form.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186360/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_cg1cos.jpg"
-  },
-  {
-    id: "urban-expressions",
-    slug: "urban-expressions",
-    name: "URBAN EXPRESSIONS",
-    medium: "Street Art / Murals",
-    description: "Contemporary street art bringing urban stories to public spaces.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186360/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_cg1cos.jpg"
-  },
-  {
-    id: "digital-dreams",
-    slug: "digital-dreams",
-    name: "DIGITAL DREAMS",
-    medium: "Digital Art / NFT",
-    description: "Cutting-edge digital artwork pushing the boundaries of visual art.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186360/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_cg1cos.jpg"
-  },
-  {
-    id: "botanical-beauty",
-    slug: "botanical-beauty",
-    name: "BOTANICAL BEAUTY",
-    medium: "Watercolor / Nature",
-    description: "Delicate botanical illustrations celebrating natural beauty and form.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186360/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_cg1cos.jpg"
-  },
-  {
-    id: "sculptural-forms",
-    slug: "sculptural-forms",
-    name: "SCULPTURAL FORMS",
-    medium: "Sculpture / Installation",
-    description: "Three-dimensional explorations of space, material, and meaning.",
-    image: "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186360/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_cg1cos.jpg"
+async function getArtArtists(): Promise<Artist[]> {
+  try {
+    const payload = await getPayload({ config })
+
+    const { docs: artists } = await payload.find({
+      collection: 'artists',
+      where: {
+        category: {
+          equals: 'art'
+        }
+      }
+    })
+
+    return artists as unknown as Artist[]
+  } catch (error) {
+    console.error('Error fetching art artists:', error)
+    return []
   }
-];
+}
 
-export default function ArtArtists() {
+export default async function ArtArtists() {
+  const artArtists = await getArtArtists();
+  
   return (
     <div className="px-4 md:px-8 lg:px-12 py-16">
       <div className="max-w-7xl mx-auto">
@@ -80,7 +54,7 @@ export default function ArtArtists() {
               <div className="space-y-4">
                 <div className="aspect-square rounded-lg overflow-hidden group-hover:scale-105 transition-transform">
                   <Image
-                    src={artist.image}
+                    src={artist.image || "https://res.cloudinary.com/dzkjxrxkf/image/upload/v1757186360/the_soulmates/the_soulmates/WhatsApp_Image_2025-09-06_at_20.08.41_cg1cos.jpg"}
                     alt={artist.name}
                     width={350}
                     height={350}
@@ -93,10 +67,10 @@ export default function ArtArtists() {
                     {artist.name}
                   </h3>
                   <p className="text-xs font-light tracking-[0.1em] text-gray-600 uppercase">
-                    {artist.medium}
+                    ART
                   </p>
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    {artist.description}
+                    {artist.shortDescription || extractRichText(artist.bio as RichTextNode, 'Creative artist exploring visual expression.')}
                   </p>
                 </div>
               </div>

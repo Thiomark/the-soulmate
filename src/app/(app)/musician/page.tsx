@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BackButton from "../../components/BackButton";
+import BackButton from "@/components/BackButton";
 
 export default function Musician() {
   return (

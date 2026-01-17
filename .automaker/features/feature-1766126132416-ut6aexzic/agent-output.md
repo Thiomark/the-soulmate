@@ -1,0 +1,1 @@
+Limit reached · resets 12pm (Africa/Johannesburg) · /upgrade to Max or add funds to continue with extra usage

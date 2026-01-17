@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "migrate": "tsx scripts/migrate-data.ts",
+    "seed": "tsx --env-file=.env.local scripts/seed-data.ts"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.62.1",
@@ -38,6 +40,7 @@
     "eslint-config-next": "15.5.2",
     "playwright": "^1.56.1",
     "tailwindcss": "^4",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }
