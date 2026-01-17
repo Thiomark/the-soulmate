@@ -24,6 +24,7 @@ export default buildConfig({
       slug: 'users',
       auth: true,
       access: {
+        create: ({ req }) => !!req.user,  // Only logged-in admins can create new users
         delete: () => false,
         update: () => false,
       },
