@@ -114,23 +114,22 @@ export default buildConfig({
         {
           name: 'image',
           type: 'text',
-          label: 'Profile Image URL',
+          label: 'Profile Image',
+          admin: {
+            components: {
+              Field: '@/components/admin/CloudinaryUpload#CloudinaryUpload',
+            },
+          },
         },
         {
           name: 'galleryImages',
-          type: 'array',
+          type: 'json',
           label: 'Gallery Images',
-          fields: [
-            {
-              name: 'url',
-              type: 'text',
-              required: true,
+          admin: {
+            components: {
+              Field: '@/components/admin/CloudinaryGallery#CloudinaryGallery',
             },
-            {
-              name: 'alt',
-              type: 'text',
-            },
-          ],
+          },
         },
         // Music artist specific fields
         {
@@ -481,19 +480,22 @@ export default buildConfig({
         {
           name: 'image',
           type: 'text',
-          label: 'Main Image URL',
+          label: 'Main Image',
+          admin: {
+            components: {
+              Field: '@/components/admin/CloudinaryUpload#CloudinaryUpload',
+            },
+          },
         },
         {
           name: 'galleryImages',
-          type: 'array',
+          type: 'json',
           label: 'Gallery Images',
-          fields: [
-            {
-              name: 'url',
-              type: 'text',
-              required: true,
+          admin: {
+            components: {
+              Field: '@/components/admin/CloudinaryGallery#CloudinaryGallery',
             },
-          ],
+          },
         },
         {
           name: 'tags',
@@ -602,14 +604,32 @@ export default buildConfig({
             {
               name: 'musicImage',
               type: 'text',
+              label: 'Music Image',
+              admin: {
+                components: {
+                  Field: '@/components/admin/CloudinaryUpload#CloudinaryUpload',
+                },
+              },
             },
             {
               name: 'artImage',
               type: 'text',
+              label: 'Art Image',
+              admin: {
+                components: {
+                  Field: '@/components/admin/CloudinaryUpload#CloudinaryUpload',
+                },
+              },
             },
             {
               name: 'fashionImage',
               type: 'text',
+              label: 'Fashion Image',
+              admin: {
+                components: {
+                  Field: '@/components/admin/CloudinaryUpload#CloudinaryUpload',
+                },
+              },
             },
           ],
         },
